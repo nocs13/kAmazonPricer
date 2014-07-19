@@ -8,8 +8,26 @@ import org.w3c.dom.*;
  */
 public class kDbPricer
 {
+    File db_file;
+
     public kDbPricer()
     {
 
     }
+
+    public kDbPricer(String path)
+    {
+        open(path);
+    }
+
+    public void close()
+    {
+
+    }
+
+    public boolean open(String path)
+    {
+        return true;
+    }
+
 }
