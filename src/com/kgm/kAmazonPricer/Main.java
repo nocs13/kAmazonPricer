@@ -19,6 +19,7 @@ public class Main extends Activity {
 
         base = new kViewBase(this);
 
-        setContentView(base);
+        //setContentView(base);
+        setContentView(R.layout.lstart);
     }
 }
