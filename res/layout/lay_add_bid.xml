@@ -6,14 +6,8 @@
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add product" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Show products" />
+        android:text="Button" />
 
 </LinearLayout>
