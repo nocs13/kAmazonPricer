@@ -10,7 +10,8 @@ import android.widget.Button;
 /**
  * Created by goga on 7/3/14.
  */
-public class Main extends Activity {
+public class Main extends Activity 
+{
     kViewBase base = null;
 
     public Main()
@@ -18,7 +19,10 @@ public class Main extends Activity {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) 
+    {
+        Button btn = null;
+        
         super.onCreate(savedInstanceState);
 
         //base = new kViewBase(this);
@@ -26,13 +30,45 @@ public class Main extends Activity {
         
         setContentView(R.layout.lstart);
         
-        Button btn = (Button) findViewById(R.id.btn_lstart_start);
-        btn.setOnClickListener(new OnClickListener()
+        btn = (Button) findViewById(R.id.btn_lstart_start);
+        
+        if(btn != null)
         {
-            public void onClick(View v)
+            btn.setOnClickListener(new OnClickListener()
             {
-                setContentView(R.layout.lay_menu);
-            }
-        });
+                public void onClick(View v)
+                {
+                    Button btn = null;
+                    
+                    setContentView(R.layout.lay_menu);
+                    
+                    btn = (Button) findViewById(R.id.btn_lmenu_add_new);
+
+                    if(btn != null)
+                    {
+                        btn.setOnClickListener(new OnClickListener()
+                        {
+                            public void onClick(View v)
+                            {
+                                setContentView(R.layout.lay_new_product);
+                            }
+                        });
+                    }
+
+                    btn = (Button) findViewById(R.id.btn_lmenu_show_products);
+
+                    if(btn != null)
+                    {
+                        btn.setOnClickListener(new OnClickListener()
+                        {
+                            public void onClick(View v)
+                            {
+                                setContentView(R.layout.lay_products);
+                            }
+                        });
+                    }
+                }
+            });
+        }        
     }
 }
