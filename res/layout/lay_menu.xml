@@ -5,13 +5,13 @@
     android:orientation="vertical" >
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btn_lmenu_add_new"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Add new..." />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_lmenu_show_products"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Show products" />
