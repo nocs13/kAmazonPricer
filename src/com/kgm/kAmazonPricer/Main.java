@@ -24,9 +24,6 @@ public class Main extends Activity
         Button btn = null;
         
         super.onCreate(savedInstanceState);
-
-        //base = new kViewBase(this);
-        //setContentView(base);
         
         setContentView(R.layout.lstart);
         
@@ -51,6 +48,19 @@ public class Main extends Activity
                             public void onClick(View v)
                             {
                                 setContentView(R.layout.lay_new_product);
+
+                                Button btn = (Button) findViewById(R.id.btn_lnew_amazon);
+
+                                if(btn != null)
+                                {
+                                    btn.setOnClickListener(new OnClickListener()
+                                    {
+                                        public void onClick(View v)
+                                        {
+                                            setContentView(R.layout.lay_add_bid);
+                                        }
+                                    });
+                                }
                             }
                         });
                     }

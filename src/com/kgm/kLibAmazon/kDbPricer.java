@@ -39,8 +39,14 @@ public class kDbPricer {
 			dbf.setValidating(false);
 
 			DocumentBuilder db = dbf.newDocumentBuilder();
-
-			xml_doc = db.parse(new FileInputStream(new File(dbFile)));
+			DocumentBuilder builder = dbf.newDocumentBuilder();
+			
+			File file = new File(dbFile);
+			
+			if(!file.exists())
+				xml_doc = builder.newDocument();
+			else
+				xml_doc = db.parse(new FileInputStream(file));
 		} catch (Exception e) {
 			System.out.print("kDbPricer::kDbPricer error: " + e.getMessage());
 		}

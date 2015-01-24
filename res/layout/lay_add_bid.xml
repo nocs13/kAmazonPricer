@@ -4,10 +4,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/button1"
+    <EditText
+        android:id="@+id/editLabBidOrLink"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:ems="10"
+        android:text="Insert product BID or link" />
+
+    <Button
+        android:id="@+id/btn_lnew_amazon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add" />
 
 </LinearLayout>
