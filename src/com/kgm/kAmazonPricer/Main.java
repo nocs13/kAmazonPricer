@@ -1,10 +1,14 @@
 package com.kgm.kAmazonPricer;
 
+import com.kgm.kLibAmazon.*;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 
 /**
@@ -58,6 +62,36 @@ public class Main extends Activity
                                         public void onClick(View v)
                                         {
                                             setContentView(R.layout.lay_add_bid);
+                                            
+                                            Button btn = (Button) findViewById(R.id.btn_lnew_amazon);
+                                            
+                                            if(btn != null)
+                                            {
+                                            	btn.setOnClickListener(new OnClickListener()
+                                            	{
+                                            		public void onClick(View v)
+                                            		{
+                                            			TextView tv = (TextView) findViewById(R.id.tv_bid_warning);
+                                            			
+                                            			if(tv != null)
+                                            			{
+                                            				tv.setText("");
+                                            			}
+                                            			
+                                            			EditText et = (EditText) findViewById(R.id.editLabBidOrLink);
+                                            			
+                                            			String url = et.getText().toString();
+                                            			
+                                            			if(url.length() < 1 || !kUrlCheck.isValid(url))
+                                            			{
+                                                			if(tv != null)
+                                                			{
+                                                				tv.setText("Not valid url!");
+                                                			}
+                                               			}
+                                            		}
+                                            	});
+                                            }
                                         }
                                     });
                                 }

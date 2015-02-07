@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_add_bid"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
@@ -9,12 +10,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:text="Insert product BID or link" />
+        android:hint="Insert product web page link." />
 
     <Button
         android:id="@+id/btn_lnew_amazon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Add" />
+
+    <TextView
+        android:id="@+id/tv_bid_warning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.22" />
 
 </LinearLayout>
